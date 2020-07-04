@@ -1,0 +1,19 @@
+@mixin respond($bp) {
+  @if $bp == sm {
+    @media only screen and (min-width: $sm) {
+      @content;
+    }
+  } @else if $bp == md {
+    @media only screen and (min-width: $md) {
+      @content;
+    }
+  } @else if $bp == lg {
+    @media only screen and (min-width: $lg) {
+      @content;
+    }
+  } @else if $bp == xl {
+    @media only screen and (min-width: $xl) {
+      @content;
+    }
+  }
+}

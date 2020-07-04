@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Henny+Penny&family=Pattaya&display=swap");
+
+//colors
+$color-primary: #9453a6;
+$color-secondary: #8cbf3f;
+$color-tertiary: #f2cc0f;
+
+$color-light: #f2f2f2;
+$color-dark: #0d0d0d;
+
+$color-white: #fff;
+$color-black: #000;
+
+//font
+$default-font-size: 1.4rem;
+$font-primary: "Roboto", Arial, Helvetica, sans-serif;
+$font-secondary: "Pattaya", Arial, Helvetica, sans-serif;
+$font-tertiary: "Henny Penny", Arial, Helvetica, sans-serif;
+
+//breakpoints
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;

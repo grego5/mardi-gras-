@@ -1,0 +1,48 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // Extra small devices (Phones, 576px and less) defai;t
+  font-size: 37.5%;
+
+  // Small devices (landscape phones, 576px and up)
+  @include respond(sm) {
+    font-size: 43.75%;
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @include respond(md) {
+    font-size: 56.25%;
+  }
+
+  // Large devices (desktops, 992px and up)
+  @include respond(lg) {
+    font-size: 62.5%;
+  }
+
+  // Extra large devices (large desktops, 1200px and up)
+  @include respond(xl) {
+    font-size: 75%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  font-family: $font-primary;
+  font-weight: 400;
+  color: $color-dark;
+  font-size: $default-font-size;
+  overflow-y: scroll;
+  background: linear-gradient(45deg, #000000 0%, #9453a6 100%);
+  min-height: calc(100vh - 8rem);
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-light;
+}

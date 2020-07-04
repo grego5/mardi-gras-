@@ -1,0 +1,106 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0;
+
+  @include respond(md) {
+    position: relative;
+    margin-top: 8rem;
+  }
+
+  &-brand {
+    z-index: 1;
+    margin: 0;
+    display: none;
+    backface-visibility: hidden;
+
+    @include respond(md) {
+      display: block;
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: transform 0.2s;
+
+      &:hover,
+      &:focus {
+        transform: translate(-50%, -50%) scale(1.05);
+      }
+    }
+
+    img {
+      height: 16rem;
+    }
+  }
+
+  &-toggler {
+    position: absolute;
+    padding: 0;
+    top: 2rem;
+    left: 2rem;
+    z-index: 1;
+    border: none;
+    width: 10rem;
+    backface-visibility: hidden;
+    transition: transform 0.2s;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &-nav {
+    flex-basis: 100%;
+    justify-content: space-around;
+    background-color: $color-primary;
+    @include respond(md) {
+      border-radius: 2rem 2rem 0 0;
+    }
+
+    .nav-link {
+      position: relative;
+      color: $color-tertiary;
+      font-size: 5rem;
+      font-family: $font-secondary;
+      text-shadow: 0 3px 6px $color-black;
+      text-align: center;
+      width: fit-content;
+      margin: 0 auto;
+
+      &::before {
+        content: "";
+        height: 4px;
+        width: 0;
+        background-color: $color-tertiary;
+        box-shadow: 0 3px 6px $color-black;
+        position: absolute;
+        bottom: 8px;
+        transition: width 0.2s;
+      }
+
+      &:hover,
+      &:focus {
+        color: $color-tertiary;
+
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.nav-item-home {
+  order: -1;
+  @include respond(md) {
+    order: 0;
+  }
+}
